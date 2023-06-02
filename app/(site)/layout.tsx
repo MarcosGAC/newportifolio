@@ -1,4 +1,5 @@
-import './globals.css'
+import Link from 'next/link'
+import '../globals.css'
 import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+      <header>
+        <Link href='/' className='text-xl bg-gradient-to-r from-indigo-700 to-sky-500 bg-clip-text text-transparent'> Marcos</Link>
+      </header>
+        <main>{children}</main>
+        </body>
     </html>
   )
 }

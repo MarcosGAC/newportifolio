@@ -3,6 +3,7 @@ import { getProject } from '@/sanity/schemas/sanity-utils'
 
 import React from 'react'
 
+
 export default async function Project({params}:any) {
     const slug = params.project
     const project = await getProject(slug)
